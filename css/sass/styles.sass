@@ -1,0 +1,1283 @@
+// _styles.sass
+
+// Font Stack Variables
+$font-regular:    'proximanova_regular', Helvetica, Arial, sans-serif
+$font-bold:    'proximanova_bold', Helvetica, Arial, sans-serif
+$font-extrabold:    'proximanova_extrabold', Helvetica, Arial, sans-serif
+$font-black:    'proximanova_black', Helvetica, Arial, sans-serif
+
+//Responsive Variables
+$break-small: 420px
+$break-tablet: 768px
+
+//Color Variables
+
+/* Brand */
+$color-dish-red: #f01446
+$color-sling-blue: #14abe0
+
+
+/* Neutral */
+$color-black: #000010
+$color-grey-90: #171725
+$color-grey-71: #454550
+$color-grey-59: #696972
+$color-grey-24: #b9b9be
+$color-grey-14: #d0d0d4
+$color-grey-04: #f5f5f6
+$color-white: #ffffff
+
+/* Primary */
+$color-lindy: #11b69d
+
+/* Secondary */
+$color-orange: #f26430
+$color-purple: #6610f2
+$color-yellow: #eab700
+
+
+//Motion Variables
+$transition-1: all 1s cubic-bezier(0, 0.48, 0.19, 1.01)
+$transition-2: all 2s cubic-bezier(0, 0.48, 0.19, 1.01)
+$transition-cb: cubic-bezier(0, 0.48, 0.19, 1.01)
+
+
+// Mixins
+
+@mixin shift($width, $top, $left, $rotationY, $depth)
+	position: absolute
+	width: ($width * 1vw)
+	top: ($top * 1vw)
+	left: ($left * 1vw)
+	transform-style: preserve-3d
+	transform: rotateY(($rotationY * 1deg))
+	box-shadow: ($depth * 5vh) ($depth * 2vh) ($depth * 10vh) 0 rgba(0,0,0,(1/(10 * $depth)))
+	transition: $transition-1
+
+@mixin shift-keyart($width, $top, $left, $rotationY, $depth)
+	position: absolute
+	width: ($width * 1vw)
+	top: ($top * 1vw)
+	left: ($left * 1vw)
+	border-radius: ($depth * 2vw)
+	transform-style: preserve-3d
+	transform: rotateY(($rotationY * 1deg))
+	box-shadow: ($depth * 5vh) ($depth * 2vh) ($depth * 10vh) 0 rgba(0,0,0,(1/(10 * $depth)))
+	transition: $transition-1
+
+@mixin interval-delay($count, $interval)
+	@for $i from 1 through $count
+		&.num-#{$i} { transition: $transition-1 ($interval * $i * 1s)}
+
+@mixin interval-delay-reverse($count, $interval)
+	@for $i from 1 through $count
+		&.num-#{$i} { transition: $transition-1 ($interval * abs($i - $count - 1) * 1s)}
+
+//@mixin secondary-color($color)
+//	@for $i from 6 through 10
+//		$colorsecondary-#{$i} { darken($color, (25 * $i)%)}
+
+
+//imports
+@import fonts
+@import normalize
+
+//custom styles
+body
+	font: 100% $font-regular
+	color: $color-black
+	background-image: url("../images/texture-grid.jpg")
+
+//classes within custom styles
+.center-image
+	display: block
+	margin-left: auto
+	margin-right: auto
+	transition: $transition-1
+
+.gradient-grey
+	background: -webkit-radial-gradient(18% top, #262626, #151515)
+
+.gradient-dms-4
+	background: -webkit-radial-gradient(18% top, #4084b4, #d6234c)
+
+
+
+/* -------------------------------------- */
+/* ------------- Animation -------------- */
+/* -------------------------------------- */
+
+.icon-container
+	margin: 20vh auto 0
+	width: 80%
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	perspective: 400px
+	transition: $transition-1
+	.oneten-mark
+		width: 30vw
+		filter: blur(100vw)
+		transform: translateZ(-20000px)
+		transition: $transition-1
+	.album-club
+		width: 30vw
+		margin-right: 5%
+	.blur-more
+		position: absolute
+		top: 0
+
+
+
+.far
+	filter: blur(100vw)
+	transform: translateZ(-20000px)
+.in
+	filter: blur(0)
+	transform: translateZ(0px)
+.close
+	filter: blur(200vw)
+	transform: translateZ(10000px)
+
+
+.animation-text-start 
+	margin-top: 280px
+	opacity: 0
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		opacity: 1
+	//filter: blur(0px)
+
+
+.animation-text-finish
+    margin-top: 200px !important
+    opacity: 1 !important
+    filter: blur(0px) !important
+
+.animation-image-start 
+    margin-top: 280px !important
+    opacity: 0
+    //filter: blur(4px)
+
+.animation-image-finish
+    margin-top: 200px !important
+    opacity: 1 !important
+    filter: blur(0px) !important
+
+.blur 
+	filter: blur(2vmin) !important
+	transition: $transition-1
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		opacity: 1
+
+.blur-more
+	filter: blur(5vmin) !important
+	transition: $transition-1
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		opacity: 1
+
+.no-blur
+	filter: blur(0vw) !important
+	transition: $transition-1
+
+.fade-away 
+  opacity: .1 !important
+  /*transition: opacity 3s cubic-bezier(0, 0.48, 0.19, 1.01);*/
+
+.trgr-above
+	position: absolute
+	top: -25vh
+
+.trgr-in
+  position: relative
+  top: -25vh
+
+.trgr-top
+	position: absolute
+	top: 0
+
+.trgr-center
+	position: absolute
+	top: 50%
+
+.trgr-bottom
+	position: absolute
+	bottom: 0
+
+.trgr-out
+  position: relative
+  bottom: -40vh
+
+#trgr-hero-image
+	position: absolute
+	top: 54vh
+
+.no-transition
+  transition: all 0s linear !important
+
+/* -------------------------------------- */
+/* ----------- Animation End ------------ */
+/* -------------------------------------- */
+
+
+.button
+	font: 16px/18px $font-extrabold
+	padding: 10px 32px
+	min-width: 120px
+	border-radius: 27.5px
+	text-decoration: none
+	transition: all .5s $transition-cb
+	&.red
+		color: $color-white
+		background-color: red
+		&:hover
+			background-color: darken(red, 5%)
+			text-decoration: none
+		&:active
+			background-color: darken(red, 25%)
+			text-decoration: none
+	&.ghost .white
+		color: $color-white
+		border: 2px solid $color-white
+		&:hover
+			background-color: rgba(255, 255, 255, 0.1)
+			text-decoration: none
+		&:active
+			background-color: rgba(255, 255, 255, 0.2)
+			border: 2px solid $color-grey-24
+			text-decoration: none
+	&.ghost .black
+		color: $color-black
+		border: 2px solid $color-white
+		&:hover
+			background-color: rgba(255, 255, 255, 0.1)
+			text-decoration: none
+		&:active
+			background-color: rgba(255, 255, 255, 0.2)
+			border: 2px solid $color-grey-24
+			text-decoration: none
+
+
+
+
+
+/* -------------------------------------- */
+/* ------------- Navigaton -------------- */
+/* -------------------------------------- */
+
+.nav-container
+	position: relative
+	height: 0vmin
+	overflow: visible
+	.fixed
+		position: fixed
+	nav
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		left: 0vw
+		top: 0vh
+		height: 50px
+		width: 100%
+		z-index: 1000
+		background-color: $color-white
+		.nav-item
+			font: 14px/18px $font-extrabold
+			margin-right: 40px
+			z-index: 1100
+			.progress-bar
+				position: relative
+				bottom: 3px
+				height: 3px 
+				background-color: red
+				width: 0%
+				z-index: 950
+				transition: none
+				//transition-timing-function: none
+			.progress-bar-start
+				position: relative
+				bottom: 3px
+				height: 3px 
+				background-color: red
+				width: 0%
+				z-index: 950
+			.progress-bar-in
+				position: relative
+				bottom: 3px
+				height: 3px 
+				background-color: red
+				width: 100%
+				z-index: 950
+		.last
+			margin-right: 0
+		a
+			text-decoration: none
+			color: $color-black
+			&:hover
+				color: red
+			&:active
+				color: red
+				opacity: .9
+
+.nav-logo-wrapper, .nav-logo-wrapper-footer
+	max-width: 1000px
+	width: 100%
+	//border: 1px solid red
+	height: 50px
+	//margin: 30px 0 0 0
+	//padding: 0px 30px
+	position: absolute
+	//overflow: hidden
+	top: 30px
+	transition: all 0.5s ease
+	@media screen and (max-width: $break-small)
+		width: 350px
+
+/* -------------------------------------- */
+/* ----------- Navigaton End ------------ */
+/* -------------------------------------- */
+
+.nav-logo-wrapper
+	overflow: hidden
+
+.logo
+	position: absolute
+	//margin: 15px 0 0 0
+	top: 0px
+	left: 0px
+	img
+		//width: 16px !important
+		//height: 16px !important
+
+.overflow-auto
+	overflow: inherit !important
+
+.mobile
+	@media screen and (max-width: $break-tablet)
+		display: initial
+	@media screen and (min-width: $break-tablet)
+		display: none
+
+.desktop
+	@media screen and (min-width: $break-tablet)
+		display: initial
+	@media screen and (max-width: $break-tablet)
+		display: none
+
+
+/* -------------------------------------- */
+/* ------------- Typography ------------- */
+/* -------------------------------------- */
+
+.text-block
+	position: relative
+	display: flex
+	justify-content: left
+	align-items: center
+	margin: 25vmin auto 20vmin
+	max-width: 660px
+	h2
+		z-index: 10
+	p
+		z-index: 10
+	//height: 50vh
+	@media screen and (max-width: $break-small)
+		margin: 35vmin 5vw 50vmin
+	@media screen and (max-width: $break-tablet)
+		margin: 35vmin 5vw 50vmin
+
+.text-block-full
+	position: relative
+	display: flex
+	justify-content: left
+	align-items: center
+	margin: 30vh auto
+	max-width: 80vw
+	height: 40vh
+	@media screen and (max-width: $break-tablet)
+		max-width: 90vw
+
+.text-block-grey
+	position: relative
+	display: flex
+	justify-content: left
+	align-items: center
+	margin: 0 auto 10vh
+	max-width: 100%
+	padding: 0 10vw
+	height: 100vh
+	background-color: $color-grey-04
+	&#assets-section
+		margin: 0 auto
+	@media screen and (max-width: $break-tablet)
+		padding: 0 5vw
+
+h1
+	font: 6vw/5vw $font-black
+	letter-spacing: -1px
+	@media screen and (max-width: $break-small)
+		font: 52px/62px $font-black
+	@media screen and (max-width: $break-tablet)
+		font: 52px/62px $font-black
+h2
+	font: 62px/62px $font-black
+	letter-spacing: -.45px
+	@media screen and (max-width: $break-small)
+		font: 44px/50px $font-black
+	@media screen and (max-width: $break-tablet)
+		font: 44px/50px $font-black
+h3
+	font: 32px/36px $font-extrabold
+	letter-spacing: -.2px
+	text-transform: uppercase
+	color: $color-grey-24
+h4
+	font: 24px/32px $font-extrabold
+	letter-spacing: -.2px
+	margin-top: 40px
+span
+	position: relative
+p
+	font: 18px/26px $font-regular
+	margin-top: 24px
+.text-start
+	padding-top: 10vmin
+	opacity: 0
+	transition: $transition-1
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		opacity: 1
+.text-in
+	padding-top: 0
+	opacity: 100
+	transition: $transition-1
+.text-out
+	opacity: 10
+	transition: $transition-1
+.red-underline
+	height: 15%
+	position: absolute
+	background-color: red
+	left: 0
+	bottom: -5px
+	z-index: -1
+	&.assets-ul
+		z-index: 0
+.sling-underline
+	height: 15%
+	position: absolute
+	background-color: $color-sling-blue
+	left: 0
+	bottom: -5px
+	z-index: -1
+.blue-underline
+	height: 15%
+	position: absolute
+	background-color: blue
+	left: 0
+	bottom: -5px
+	z-index: -1
+.green-underline
+	height: 15%
+	position: absolute
+	background-color: green
+	left: 0
+	bottom: -5px
+	z-index: -1
+.underline0-out
+	width: 0
+	transition: $transition-1
+.underline0-in
+	width: 100%
+	transition: $transition-1
+.underline1-out
+	width: 0
+	transition: $transition-1 .3s
+.underline1-in
+	width: 100%
+	transition: $transition-1
+.underline2-out
+	width: 0
+	transition: $transition-1
+.underline2-in
+	width: 100%
+	transition: $transition-1 .3s
+
+.white-underline
+	height: 15%
+	position: absolute
+	background-color: $color-white
+	left: 0
+	bottom: -5px
+	z-index: -1
+.white-underline0
+	width: 0
+	transition: $transition-1
+	&:hover
+		width: 100%
+		transition: $transition-1
+
+/* -------------------------------------- */
+/* ---------- Typography End ------------ */
+/* -------------------------------------- */
+
+
+
+
+
+/* -------------------------------------- */
+/* -------------- Imagery --------------- */
+/* -------------------------------------- */
+
+.image-block
+	width: 100%
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	&#beacon-section
+		height: 40vh
+		margin-bottom: 30vh
+		padding: 0 27vw
+	#beacon-logo
+		position: relative
+		width: 12vw
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+			width: 100px
+	&#beacon-dish
+		background-color: $color-dish-red
+		height: 90vh
+		margin-top: 20vh
+		padding: 0 27vw
+	#beacon-dish-logo
+		position: relative
+		width: 15vw
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+			width: 100px
+	&#beacon-sling
+		background-color: $color-sling-blue
+		height: 90vh
+		margin-top: 20vh
+		padding: 0 27vw
+	#beacon-sling-logo
+		position: relative
+		width: 12vw
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+			width: 100px
+	&#beacon-smart-home
+		background-color: blue
+		height: 90vh
+		padding: 0 30vw
+	#beacon-smart-home-logo
+		position: relative
+		width: 25vw
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+			width: 150px
+	&#beacon-wireless
+		background-color: $color-black
+		height: 90vh
+		margin-top: 20vh
+		padding: 0 27vw
+	#beacon-wireless-logo
+		position: relative
+		width: 25vw
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+			width: 150px
+	.secondary-image1
+		position: absolute
+		bottom: -10%
+		right: 5%
+		width: 30vw
+		@media screen and (max-width: $break-small)
+			width: 40%
+	.secondary-image2
+		position: absolute
+		bottom: -10%
+		left: 5%
+		width: 30vw
+		@media screen and (max-width: $break-small)
+			width: 40%
+	.image-start
+		padding-top: 2vmin
+	.image-finish
+		padding-top: -4vmin
+	#ranch-portrait, #rocket, #sling-tv, #ihs-img
+		width: 80vw
+		@media screen and (max-width: $break-small)
+			width: 100%
+	#dish-brand, #sling-brand, #wireless-tower, #shs-nest
+		margin-top: 10vh
+		width: 80vw
+		@media screen and (max-width: $break-small)
+			width: 100%
+			width: 100%
+	#wireless-video
+		margin: 10vh auto 25vh
+		width: 80vw
+		@media screen and (max-width: $break-tablet)
+			width: 100%
+		height: auto
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+			margin: 0 0 50px 0
+		video
+			width: 100%
+			box-shadow: 0 3vh 10vh 0vh rgba(0, 0, 0, 0.1)
+
+.caption
+	position: absolute
+	bottom: 3vw
+	right: 13vw
+	font: 14px/20px $font-extrabold
+	text-transform: uppercase
+	text-shadow: 0 0 3vh rgba(0,0,0,.2)
+	color: $color-white
+
+
+/* -------------------------------------- */
+/* --------------- Hero ----------------- */
+/* -------------------------------------- */
+
+.hero
+	width: 100%
+	height: 100vh
+	background-color: red
+	position: relative
+	/*@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: block*/
+	.hero-beacon
+		width: 12vh
+		display: none
+	.trgr
+		position: absolute
+		bottom: -50vh
+	.video-container 
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		overflow: hidden
+		video
+			/* Make video to at least 100% wide and tall */
+			min-width: 100%
+			min-height: 100%
+			/* Setting width & height to auto prevents the browser from stretching or squishing the video */
+			width: auto
+			height: auto
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			-ms-transform: translate(-50%,-50%)
+			@media screen and (max-width: $break-small)
+				min-height: 100%
+				min-width: auto
+
+//Hero for IE only, this will not be shown on other browsers
+.ie-hero
+	background-color: red
+	display: none
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: block
+		width: 100%
+		height: 100vh
+		align-items: center
+		justify-content: center
+	.hero-beacon
+		width: 100px
+		padding-top: 15%
+		display: block
+		margin: 0 auto
+	p
+		font: $font-regular
+		text-align: center
+		color: $color-white
+		.browser-link
+			margin: 10px 10px
+			color: #fff
+			text-decoration: underline
+
+// hides site for IE only
+.ie-hide
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: none
+
+
+/* -------------------------------------- */
+/* ------------- Hero End --------------- */
+/* -------------------------------------- */
+
+
+
+
+
+/* -------------------------------------- */
+/* ------------ Dish to Dish ------------ */
+/* -------------------------------------- */
+
+.dish-dish-section
+	height: 350vh
+	position: relative
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		height: 300px !important
+.dish-dish-block-out
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100vh
+	width: 100%
+.dish-dish-block-in
+	position: fixed
+	top: 0vh
+	left: 0vh
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100vh
+	width: 100%
+.dish-dish-block-finish
+	position: absolute
+	bottom: -50vh
+	left: 0vh
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100vh
+	width: 100%
+.dish-dish-img
+	max-width: 90vw
+#trgr-dish-dish
+	position: relative
+	top: 50vh
+#png-seq
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: none
+.png-ie-fix
+	display: none
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: block
+		margin: 0
+		width: 500px
+#dish-dish-section
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		height: 300px !important
+		//border: 1px solid red
+
+/* -------------------------------------- */
+/* ---------- Dish to Dish End ---------- */
+/* -------------------------------------- */
+
+
+/* -------------------------------------- */
+/* ------------ sling to sling ------------ */
+/* -------------------------------------- */
+
+.sling-sling-section
+	height: 350vh
+	position: relative
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		height: 300px !important
+.sling-sling-block-out
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100vh
+	width: 100%
+.sling-sling-block-in
+	position: fixed
+	top: 0vh
+	left: 0vh
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100vh
+	width: 100%
+.sling-sling-block-finish
+	position: absolute
+	bottom: -50vh
+	left: 0vh
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100vh
+	width: 100%
+.sling-sling-img
+	max-width: 90vw
+#trgr-sling-sling
+	position: relative
+	top: 50vh
+
+/* -------------------------------------- */
+/* --------- sling to sling End --------- */
+/* -------------------------------------- */
+
+
+
+/* -------------------------------------- */
+/* ------------- LOB Text --------------- */
+/* -------------------------------------- */
+
+.lob-block
+	background-color: $color-black
+	overflow: hidden
+	width: 100%
+	height: 100vh
+	position: relative
+.lob-block-fixed
+	background-color: $color-black
+	overflow: hidden
+	width: 100%
+	height: 100vh
+	position: fixed
+	top: 0
+	left: 0
+.lob-outdoors
+	position: absolute
+	background-image: url("../images/dishoutdoorsdark.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	width: 100%
+	height: 100%
+	top: 0
+	overflow: none
+	z-index: 2
+.lob-dany
+	position: absolute
+	background-image: url("../images/dishanywhere.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	width: 100%
+	height: 100%
+	top: 0
+	overflow: none
+	z-index: 2
+.lob-media
+	position: absolute
+	background-image: url("../images/dishmedia.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	width: 100%
+	height: 100%
+	top: 0
+	overflow: none
+	z-index: 2
+.lob-manufacturing
+	position: absolute
+	background-image: url("../images/dishmanufacturing.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	width: 100%
+	height: 100%
+	top: 0
+	overflow: none
+	z-index: 2
+.lob-flex
+	height: 100%
+	width: 100%
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: flex-end
+	padding-bottom: 15vh
+	top: 0
+	z-index: 10
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: none
+	.trgr
+		position: relative
+		top: -45vh
+	.lob-dish-logo
+		order: 1
+		height: 10vmin
+		position: relative
+		right: 0vmin
+	.lob-text
+		order: 2
+		height: 10vmin
+		width: 45vmin
+		overflow: visible
+		.lob-mask-start
+			-webkit-mask-repeat: no-repeat
+			-webkit-mask-box-image: url(../images/SVG/circle.svg)
+			-webkit-mask-mode: alpha
+			mask-repeat: no-repeat
+			position: relative
+			left: 0vmin
+			top: 5vmin
+			width: 0vmin
+			height: 0vmin
+			transition: $transition-1
+		.lob-mask-finish
+			-webkit-mask-repeat: no-repeat
+			-webkit-mask-box-image: url(../images/SVG/circle.svg)
+			-webkit-mask-mode: alpha
+			mask-repeat: no-repeat
+			position: relative
+			left: -71.5vmin
+			top: -60vmin
+			width: 130vmin
+			height: 130vmin
+			transition: $transition-1
+		.lob-outdoors-text
+			height: 10vmin
+			position: absolute
+			margin-bottom: -5vmin
+			bottom: 50%
+			left: 55%
+.dish-outdoor-text-ie-fix
+	z-index: 300
+	bottom: 175px
+	width: 700px
+	position: absolute
+	left: 0
+	right: 0
+	margin-left: auto
+	margin-right: auto
+	display: none
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: block
+	.dish-ie-logo
+		height: 110px;
+		margin: 0 20px 0 0px;
+	.outdoor-ie-logo
+		//width: 100px
+		height: 70px
+	.manufacturing-ie-logo
+		//width: 100px
+		height: 70px
+			
+		
+
+
+.beacon-block
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	margin: 10vh auto
+	max-width: 100vw
+	padding: 0 10vw
+	height: 110vh
+	background-color: $color-grey-04
+	overflow: visible
+	.beacon
+		position: absolute
+		top: 30vh
+		height: 20vmin
+		z-index: 100
+	.mask-dish-start
+		-webkit-mask-repeat: no-repeat
+		-webkit-mask-box-image: url(../images/SVG/circle.svg)
+		-webkit-mask-mode: alpha
+		mask-repeat: no-repeat
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		left: 41vw
+		top: 30vh
+		width: 15vw
+		height: 15vw
+		opacity: 0
+		transition: $transition-1
+	.mask-dish-finish
+		-webkit-mask-repeat: no-repeat
+		-webkit-mask-box-image: url(../images/SVG/circle.svg)
+		-webkit-mask-mode: alpha
+		mask-repeat: no-repeat
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		left: 10vw
+		top: 50vh
+		width: 25vw
+		height: 25vw
+		opacity: 1
+		transition: $transition-1
+	.beacon-dish-start
+		position: absolute
+		top: 0
+		width: 18vmin
+		transition: $transition-1
+	.beacon-dish-finish
+		position: absolute
+		top: 8vw
+		width: 12vmin
+		transition: $transition-1
+	.mask-sling-start
+		-webkit-mask-repeat: no-repeat
+		-webkit-mask-box-image: url(../images/SVG/circle.svg)
+		-webkit-mask-mode: alpha
+		mask-repeat: no-repeat
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		left: 50vw
+		top: 30vh
+		width: 20vmin
+		height: 20vmin
+		opacity: 0
+		margin-left: -12.5vmin
+		transition: $transition-1
+	.mask-sling-finish
+		-webkit-mask-repeat: no-repeat
+		-webkit-mask-box-image: url(../images/SVG/circle.svg)
+		-webkit-mask-mode: alpha
+		mask-repeat: no-repeat
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		left: 30vw
+		top: 50vh
+		width: 25vmin
+		height: 25vmin
+		opacity: 1
+		margin-left: -12.5vmin
+		transition: $transition-1
+	.beacon-sling-start
+		position: absolute
+		margin-left: .2vmin
+		top: 0
+		width: 20vmin
+		transition: $transition-1
+	.beacon-sling-finish
+		position: absolute
+		margin-left: .07vw
+		top: 8vw
+		width: 13.35vmin
+		transition: $transition-1
+
+
+/* -------------------------------------- */
+/* ----------- LOB Text End ------------- */
+/* -------------------------------------- */
+
+
+.section-card
+	width: 80%
+	//max-width: 1000px
+	margin: 4vmax auto 0
+	position: relative
+	height: 35vh
+	@media screen and (max-width: $break-tablet)
+		height: 74vmax
+		width: 90%
+	.shs-card-out
+		border-radius: 15px
+		box-shadow: 0 0 0 -.5px rgba(0,0,0,.5)
+		display: flex
+		justify-content: left
+		align-items: center
+		background-color: $color-white
+		background-size: auto 100%
+		background-repeat: no-repeat
+		background-position: bottom right
+		padding: 4vmax
+		width: 38vmax
+		height: 35vh
+		top: 10vh
+		@media screen and (max-width: $break-tablet)
+			width: 90vw
+			margin-top: 4vmax		
+		.shs-text
+			font: 36px/42px $font-extrabold
+			color: $color-black
+			text-shadow: 0 0 5vh rgba(255,255,255,.4)
+	.shs-card-in
+		border-radius: 1.3vmin
+		box-shadow: 0 5vh 13vh -2vh rgba(0,0,0,.2)
+		display: flex
+		justify-content: left
+		align-items: center
+		background-color: $color-white
+		background-size: auto 100%
+		background-repeat: no-repeat
+		background-position: bottom right
+		padding: 4vmax
+		width: 38vmax
+		height: 35vh
+		top: 0
+		@media screen and (max-width: $break-tablet)
+			width: 90vw
+			margin-top: 4vmax
+		.shs-text
+			font: 36px/42px $font-extrabold
+			color: $color-black
+			text-shadow: 0 0 5vh rgba(255,255,255,.4)
+	#card-1
+		background-image: url("../images/card-1.png")
+		position: absolute
+		left: 0
+		transition: $transition-1
+		order: 1
+		@media screen and (max-width: $break-tablet)
+			position: relative
+	#card-2
+		background-image: url("../images/card-2.png")
+		position: absolute
+		right: 0
+		transition: $transition-1
+		transition-delay: .15s
+		order: 2
+		@media screen and (max-width: $break-tablet)
+			position: relative
+	#card-3
+		background-image: url("../images/card-3.png")
+		position: absolute
+		left: 0
+		transition: $transition-1
+		@media screen and (max-width: $break-tablet)
+			position: relative
+	#card-4
+		background-image: url("../images/card-4.png")
+		position: absolute
+		right: 0
+		transition: $transition-1
+		transition-delay: .15s
+		@media screen and (max-width: $break-tablet)
+			position: relative
+
+.section-video
+	width: 100%
+	position: relative
+	margin: 10vh 0
+	.video-container 
+		position: relative
+		top: 0
+		bottom: 0
+		width: 100%
+		height: 60vmax
+		overflow: hidden
+		display: flex
+		justify-content: center
+		align-items: center
+		video 
+			/* Make video to at least 100% wide and tall */
+			//min-width: 100%
+			min-width: 100%
+			/* Setting width & height to auto prevents the browser from stretching or squishing the video */
+			width: auto
+	.wide-1000
+		width: 1000px
+		height: auto
+		margin: 0 auto
+		video 
+			max-width: 1000px
+			width: 90%
+			margin: 0 5%
+			box-shadow: 0 3vh 10vh 0vh rgba(0, 0, 0, 0.1)
+
+
+footer
+	width: 100%
+	height: 80vh
+	background-color: red
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	position: relative
+	.footer-beacon
+		position: absolute
+		left: -60vmin
+		width: 120vmin
+		order: 1
+		@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+			left: -360px
+			top: -120px
+		//@media screen and (max-width: $break-tablet)
+			//position: relative
+			//width: 12vh
+	.trgr
+		position: absolute
+		top: 20vh
+	a
+		font: 16px/20px $font-extrabold
+		order: 2
+		text-transform: uppercase
+		overflow: visible
+		color: $color-white
+		margin-right: 40px
+		//background: url("../images/white-bar.svg") 0% 95%/0% 15% repeat-x
+		transition: $transition-1
+		position: relative
+		&:hover
+			font: 16px/20px $font-extrabold
+			text-transform: uppercase
+			text-decoration: none
+			color: $color-white
+			transition: $transition-1
+			//background: url("../images/white-bar.svg") 0% 95%/100% 15% repeat-x
+		span
+			position: absolute
+			width: 0%
+			background-color: #fff
+			height: 5px
+			bottom: -10px
+			left: 0px
+			transition: $transition-1
+		.fullwidth
+			width: 100%
+	.last
+		margin-right: 0px
+	nav
+		position: absolute
+		top: 5vh
+		right: 5vh
+		//@media screen and (max-width: $break-tablet)
+			//width: 100vw
+		//margin: -15px 0 0 0
+		//position: absolute
+		//bottom: 70px
+	.white-underline
+		height: 15%
+		position: absolute
+		background-color: $color-white
+		left: 0
+		bottom: -5px
+		z-index: -1
+	.white-underline0
+		width: 0
+		transition: $transition-1
+		&:hover
+			width: 100%
+			transition: $transition-1
+	.footer-logo
+		position: absolute
+		right: 5vh
+		bottom: 5vh
+		font-size: 28px
+		color: $color-white
+		span
+			color: $color-white
+			margin: 0 6px 0 0px
+
+//ie fixes
+#trgr-unity-section
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		overflow: hidden
+
+.hero .hero-beacon
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: block !important
+		margin: 0 auto
+		padding-top: 250px
+
+.video-container
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		display: none
+
+.unity-video
+	@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) 
+		height: 500px
+
+

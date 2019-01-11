@@ -1,0 +1,361 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padding",
+				"padding-left\tproperty"
+			],
+			[
+				"st",
+				"status-box-uptodate"
+			],
+			[
+				"sta",
+				"status-box-uptodate"
+			],
+			[
+				"sec",
+				"section-element"
+			],
+			[
+				"secon",
+				"secondary-nav-link"
+			],
+			[
+				"Comp",
+				"Components"
+			],
+			[
+				"color",
+				"color-box"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/sass/styles.sass",
+			"settings":
+			{
+				"buffer_size": 27680,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 3422,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/JL-magic.js",
+			"settings":
+			{
+				"buffer_size": 35992,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/dev/zz-portfolio",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/dev/zz-portfolio/css",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/dev/zz-portfolio/css/sass"
+	],
+	"file_history":
+	[
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/Aurora Rally Equipment/Website/Development/Working Folder/styles/main.less",
+		"/Users/johnlindmark/Downloads/base-less-theme-master/styles/variables_light.less",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/DISH/Design System/Website/status/status.html",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/DISH/Design System/Website/style/typography.html",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/DISH/Design System/Website/style/colors.html",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/DISH/Design System/Website/components/text-input.html",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/DISH/Design System/Website/components/links.html",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/DISH/Design System/Website/components/buttons.html",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/DISH/Design System/Website/components/forms.html",
+		"/Users/johnlindmark/Downloads/website/style/colors.html",
+		"/Users/johnlindmark/Documents/Personal Design/Lindmark Design/DISH/Design System/Website/components/button.html"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/sass/styles.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1196,
+								1196
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1065.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1231,
+								1231
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 524.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "js/JL-magic.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 35992,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 53.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.33,
+			0.66,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "portfolio.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
