@@ -4,15 +4,15 @@ var e=void 0!==document.documentMode,n=11===document.documentMode;
 // browser is IE
 e&&isIE11;var t=new ScrollMagic.Controller,a=$(window).height();
 // Oneten Icon Z Shift
-new ScrollMagic.Scene({triggerElement:"#trgr-oneten-mark-in",duration:.5*a}).setTween("#oneten-mark",{filter:"blur(0vw)",transform:"translateZ(0vw)"}).addIndicators({name:"Oneten Mark In"}).addTo(t);
+new ScrollMagic.Scene({triggerElement:"#trgr-oneten-mark-in",duration:5*a}).setTween("#oneten-mark",{filter:"blur(0vw)",transform:"translateZ(0px)"}).addIndicators({name:"Oneten Mark In"}).addTo(t),new ScrollMagic.Scene({triggerElement:"#trgr-oneten-mark-in",duration:5*a}).setTween("#oneten-mark-blur",{transform:"translateZ(0px)"}).addIndicators({name:"Oneten Mark In"}).addTo(t),new ScrollMagic.Scene({triggerElement:"#trgr-oneten-mark-out",duration:5*a}).setTween("#oneten-mark",{filter:"blur(70vw)",transform:"translateZ(1000px) rotate3d(1,.7,1,220deg)"}).addIndicators({name:"Oneten Mark In"}).addTo(t),new ScrollMagic.Scene({triggerElement:"#trgr-oneten-mark-out",duration:5*a}).setTween("#oneten-mark-blur",{transform:"translateZ(1000px) rotate3d(1,.7,1,220deg)"}).addIndicators({name:"Oneten Mark In"}).addTo(t);
 // Sub Nav
-var s=new ScrollMagic.Scene({triggerElement:"#trigger-sub-nav-pin",duration:0}).on("enter",function(){$("#sub-nav").addClass("fixed")}).on("leave",function(){$("#sub-nav").removeClass("fixed")}).addIndicators({name:"Sub Nav"}).addTo(t),r=new ScrollMagic.Controller({globalSceneOptions:{triggerHook:"onLeave"}}),o=$("#trgr-mission-section").outerHeight();
+var r=new ScrollMagic.Scene({triggerElement:"#trigger-sub-nav-pin",duration:0}).on("enter",function(){$("#sub-nav").addClass("fixed")}).on("leave",function(){$("#sub-nav").removeClass("fixed")}).addIndicators({name:"Sub Nav"}).addTo(t),s=new ScrollMagic.Controller({globalSceneOptions:{triggerHook:"onLeave"}}),o=$("#trgr-mission-section").outerHeight();
 // Nav 1 Progress Bar
-new ScrollMagic.Scene({triggerElement:"#trgr-mission-section",duration:o}).setTween("#nav-1",{width:"100%"}).addIndicators({name:"progress bar 1"}).addTo(r);
+new ScrollMagic.Scene({triggerElement:"#trgr-mission-section",duration:o}).setTween("#nav-1",{width:"100%"}).addIndicators({name:"progress bar 1"}).addTo(s);
 // Nav 2 Progress Bar
-var i=$("#trgr-journey-section").outerHeight();new ScrollMagic.Scene({triggerElement:"#trgr-journey-section",duration:i}).setTween("#nav-2",{width:"100%"}).addIndicators({name:"progress bar 2"}).addTo(r);
+var i=$("#trgr-journey-section").outerHeight();new ScrollMagic.Scene({triggerElement:"#trgr-journey-section",duration:i}).setTween("#nav-2",{width:"100%"}).addIndicators({name:"progress bar 2"}).addTo(s);
 // Nav 3 Progress Bar
-var d=$("#trgr-unity-section").outerHeight();new ScrollMagic.Scene({triggerElement:"#trgr-unity-section",duration:d}).setTween("#nav-3",{width:"100%"}).addIndicators({name:"progress bar 3"}).addTo(r),
+var d=$("#trgr-unity-section").outerHeight();new ScrollMagic.Scene({triggerElement:"#trgr-unity-section",duration:d}).setTween("#nav-3",{width:"100%"}).addIndicators({name:"progress bar 3"}).addTo(s),
 // Unity Text
 new ScrollMagic.Scene({triggerElement:"#trgr-unity-text-in",duration:0}).on("enter",function(){$("#unity-text").addClass("text-in"),$("#unity-text").removeClass("text-start")}).on("leave",function(){$("#unity-text").addClass("text-start"),$("#unity-text").removeClass("text-in")}).addIndicators({name:"Unity Text"}).addTo(t),new ScrollMagic.Scene({triggerElement:"#trgr-unity-text-out",duration:0}).on("enter",function(){$("#unity-text").addClass("text-out blur"),$("#unity-text").removeClass("text-in no-blur")}).on("leave",function(){$("#unity-text").addClass("text-in no-blur"),$("#unity-text").removeClass("text-out blur")}).addIndicators({name:"Unity Text Out"}).addTo(t),
 // Unity Red
@@ -65,12 +65,12 @@ new ScrollMagic.Scene({triggerElement:"#trgr-dish-text-in",duration:0}).on("ente
 // DISH Red
 new ScrollMagic.Scene({triggerElement:"#trgr-dish-red",duration:0}).on("enter",function(){$("#lob-dish-red").addClass("underline0-in"),$("#lob-dish-red").removeClass("underline0-out")}).on("leave",function(){$("#lob-dish-red").addClass("underline0-out"),$("#lob-dish-red").removeClass("underline0-in")}).addIndicators({name:"DISH Red"}).addTo(t);
 // LOB Cycles
-var s=$(".lob-block"),c=$(window).height();$(window).resize(function(){c=$(window).height()});
+var r=$(".lob-block"),c=$(window).height();$(window).resize(function(){c=$(window).height()});
 // Initialise the scrollmagic controller
 var u=new ScrollMagic.Controller({globalSceneOptions:{triggerHook:"onLeave"}});
 // Loop through each scene and create a new
 // scrollmagic scene for each one
-s.each(function(){var e=new ScrollMagic.Scene({triggerElement:this,duration:600,triggerHook:"onEnter"}).setPin(this).addTo(u).addIndicators({name:"pinned images"});// add indicators (requires plugin)
+r.each(function(){var e=new ScrollMagic.Scene({triggerElement:this,duration:600,triggerHook:"onEnter"}).setPin(this).addTo(u).addIndicators({name:"pinned images"});// add indicators (requires plugin)
 //.setClassToggle( this, 'is-active' )
 }),
 // Dish Outdoors

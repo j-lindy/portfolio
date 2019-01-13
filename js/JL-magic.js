@@ -18,15 +18,29 @@ var windowHeight = $(window).height();
 
 // Oneten Icon Z Shift
 
-new ScrollMagic.Scene({triggerElement: "#trgr-oneten-mark-in", duration: (windowHeight*.5)})
+new ScrollMagic.Scene({triggerElement: "#trgr-oneten-mark-in", duration: (windowHeight*5)})
 // animate color and top border in relation to scroll position
-.setTween("#oneten-mark", {filter: "blur(0vw)", transform: "translateZ(0vw)"}) // the tween durtion can be omitted and defaults to 1
+.setTween("#oneten-mark", {filter: "blur(0vw)", transform: "translateZ(0px)"}) // the tween durtion can be omitted and defaults to 1
 .addIndicators({name: "Oneten Mark In"}) // add indicators (requires plugin)
 .addTo(controller);
 
+new ScrollMagic.Scene({triggerElement: "#trgr-oneten-mark-in", duration: (windowHeight*5)})
+// animate color and top border in relation to scroll position
+.setTween("#oneten-mark-blur", {transform: "translateZ(0px)"}) // the tween durtion can be omitted and defaults to 1
+.addIndicators({name: "Oneten Mark In"}) // add indicators (requires plugin)
+.addTo(controller);
 
+new ScrollMagic.Scene({triggerElement: "#trgr-oneten-mark-out", duration: (windowHeight*5)})
+// animate color and top border in relation to scroll position
+.setTween("#oneten-mark", {filter: "blur(70vw)", transform: "translateZ(1000px) rotate3d(1,.7,1,220deg)"}) // the tween durtion can be omitted and defaults to 1
+.addIndicators({name: "Oneten Mark In"}) // add indicators (requires plugin)
+.addTo(controller);
 
-
+new ScrollMagic.Scene({triggerElement: "#trgr-oneten-mark-out", duration: (windowHeight*5)})
+// animate color and top border in relation to scroll position
+.setTween("#oneten-mark-blur", {transform: "translateZ(1000px) rotate3d(1,.7,1,220deg)"}) // the tween durtion can be omitted and defaults to 1
+.addIndicators({name: "Oneten Mark In"}) // add indicators (requires plugin)
+.addTo(controller);
 
 // Sub Nav
 

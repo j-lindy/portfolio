@@ -85,6 +85,7 @@ $transition-cb: cubic-bezier(0, 0.48, 0.19, 1.01)
 //custom styles
 body
 	font: 100% $font-regular
+	height: 6000vh
 	color: $color-black
 	background-image: url("../images/texture-grid.jpg")
 
@@ -107,20 +108,27 @@ body
 /* ------------- Animation -------------- */
 /* -------------------------------------- */
 
+.fixed-section
+	width: 100%
+	height: 100vh
+	top: 0
+	position: fixed
+	display: flex
+	align-items: center
+	justify-content: center
+
 .icon-container
-	margin: 20vh auto 0
 	width: 80%
 	position: relative
 	display: flex
 	justify-content: center
 	align-items: center
 	perspective: 400px
-	transition: $transition-1
+	overflow: visible
 	.oneten-mark
 		width: 30vw
-		filter: blur(100vw)
-		transform: translateZ(-20000px)
-		transition: $transition-1
+		filter: blur(10vw)
+		transform: translateZ(-2000px)
 	.album-club
 		width: 30vw
 		margin-right: 5%
@@ -207,6 +215,13 @@ body
 .trgr-out
   position: relative
   bottom: -40vh
+
+.trgr-timeline
+	position: absolute
+	&#trgr-oneten-mark-in
+		top: 100vh
+	&#trgr-oneten-mark-out
+		top: 700vh
 
 #trgr-hero-image
 	position: absolute
