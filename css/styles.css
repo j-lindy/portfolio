@@ -477,12 +477,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fade-in 3s cubic-bezier(0, 0.48, 0.19, 1.01) 1s both; }
+  animation: fade 3s cubic-bezier(0, 0.48, 0.19, 1.01) 1s both; }
   .video-container video {
     height: auto;
     width: auto; }
 
-@keyframes (fade-in) {
+@keyframes (fade) {
   0% {
     opacity: 0; }
   100% {
