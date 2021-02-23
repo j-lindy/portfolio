@@ -376,6 +376,14 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/models/winged-victory.glb": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/models/winged-victory.glb",
+		"oF": 0
+		},
 	"/portfolio.sublime-project": {
 		"cB": 0,
 		"ft": 8192,
