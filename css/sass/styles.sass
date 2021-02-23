@@ -251,7 +251,7 @@ body
 /* ---------- Typography End ------------ */
 /* -------------------------------------- */
 
-=keyframes($name)
+@mixin keyframes($name)
   @-webkit-keyframes #{$name}
     @content
   @-moz-keyframes #{$name}
@@ -281,7 +281,7 @@ body
 		height: auto
 		width: auto
 
-+keyframes(fade-in)
+@keyframes(fade-in)
   0%
     opacity: 0
   100%
