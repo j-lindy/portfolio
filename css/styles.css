@@ -3,32 +3,19 @@
 /* Brands */
 @import url("//hello.myfonts.net/count/2d7cd4");
 @font-face {
-  font-family: 'proximanova_regular';
-  src: url("../fonts/proximanova/proximanova-regular-webfont.eot");
-  src: url("../fonts/proximanova/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-regular-webfont.woff2") format("woff2"), url("../fonts/proximanova/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova/proximanova-regular-webfont.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: 'DIN-Bold';
+  src: url("https://files.cargocollective.com/100176/2D7CD4_0_0.eot");
+  src: url("https://files.cargocollective.com/100176/2D7CD4_0_0.eot?#iefix") format("embedded-opentype"), url("https://files.cargocollective.com/100176/2D7CD4_0_0.woff2") format("woff2"), url("https://files.cargocollective.com/100176/2D7CD4_0_0.woff") format("woff"), url("https://files.cargocollective.com/100176/2D7CD4_0_0.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'proximanova_bold';
-  src: url("../fonts/proximanova/proximanova-bold-webfont.eot");
-  src: url("../fonts/proximanova/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-bold-webfont.woff2") format("woff2"), url("../fonts/proximanova/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova/proximanova-bold-webfont.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: 'DIN-UltraLight';
+  src: url("https://files.cargocollective.com/100176/2D7CD4_1_0.eot");
+  src: url("https://files.cargocollective.com/100176/2D7CD4_1_0.eot?#iefix") format("embedded-opentype"), url("https://files.cargocollective.com/100176/2D7CD4_1_0.woff2") format("woff2"), url("https://files.cargocollective.com/100176/2D7CD4_1_0.woff") format("woff"), url("https://files.cargocollective.com/100176/2D7CD4_1_0.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'proximanova_extrabold';
-  src: url("../fonts/proximanova/proximanova-extrabold-webfont.eot");
-  src: url("../fonts/proximanova/proximanova-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-extrabold-webfont.woff2") format("woff2"), url("../fonts/proximanova/proximanova-extrabold-webfont.woff") format("woff"), url("../fonts/proximanova/proximanova-extrabold-webfont.ttf") format("truetype"), url("../fonts/proximanova/proximanova-extrabold-webfont.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'proximanova_black';
-  src: url("../fonts/proximanova/proximanova-black-webfont.eot");
-  src: url("../fonts/proximanova/proximanova-black-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova/proximanova-black-webfont.woff2") format("woff2"), url("../fonts/proximanova/proximanova-black-webfont.woff") format("woff"), url("../fonts/proximanova/proximanova-black-webfont.ttf") format("truetype"), url("../fonts/proximanova/proximanova-black-webfont.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: 'DIN-Regular';
+  src: url("https://files.cargocollective.com/100176/2D7CD4_2_0.eot");
+  src: url("https://files.cargocollective.com/100176/2D7CD4_2_0.eot?#iefix") format("embedded-opentype"), url("https://files.cargocollective.com/100176/2D7CD4_2_0.woff2") format("woff2"), url("https://files.cargocollective.com/100176/2D7CD4_2_0.woff") format("woff"), url("https://files.cargocollective.com/100176/2D7CD4_2_0.ttf") format("truetype"); }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -482,7 +469,25 @@ body {
     height: auto;
     width: auto; }
 
-@keyframes (fade) {
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade {
   0% {
     opacity: 0; }
   100% {
