@@ -35,6 +35,16 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/css/sass/fonts.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/css/sass/fonts-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/css/sass/fonts_old.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -539,7 +549,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 557343805,
-	"displayValue": "zz-portfolio",
+	"displayValue": "portfolio",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-fry",
 	"iconImageWasSetByUser": 1
