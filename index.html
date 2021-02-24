@@ -35,7 +35,7 @@
     </nav>
   </div>-->
 
-  <div class="video-container">
+  <!-- <div class="video-container">
     <video autoplay muted loop>
       <source src="video/SDO-trim-3.mp4" type="video/mp4">
     </video>
@@ -46,7 +46,7 @@
     Lindmark Design
   </div>
 
-  <!-- About -->
+ About
 
   <div class="image-block" id="about-section">
     <div id="trgr-about-section"></div>
@@ -57,14 +57,32 @@
         <p>I play well with others.<br>I just want to make cool shit.
       </div>
     </div>
-  </div>
+  </div> -->
 
-<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-<script type="text/javascript" src="js/TweenMax.min.js"></script>
-<script type="text/javascript" src="js/ScrollMagic.js"></script>
-<script type="text/javascript" src="js/animation.gsap.js"></script>
-<script type="text/javascript" src="js/debug.addIndicators.js"></script>
-<!-- <script type="text/javascript" src="js/JL-magic.js"></script> -->
+  <model-viewer src="models/winged-victory.glb" id="victory" auto-rotate camera-orbit="-239.9deg 46.14deg 61.12m" min-camera-orbit="auto auto auto" max-camera-orbit="auto auto 61.12m" min-field-of-view="auto" max-field-of-view="auto" camera-target="2m 25m 1m"  shadow-intensity="1.8" exposure="0.58" environment-image="neutral">
+
+</model-viewer>
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+<script type="module">
+
+  // Find the latest version by visiting https://unpkg.com/three. The URL will
+  // redirect to the newest stable release.
+  import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+
+  const scene = new THREE.Scene();
+
+</script>
+<script type="text/javascript" src="js/three.js"></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<!-- <script type="text/javascript" src="js/victory.js"></script> -->
+<script type="text/javascript" src="js/JL-magic.js"></script>
 
 </body>
 
