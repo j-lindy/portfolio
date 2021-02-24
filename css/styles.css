@@ -532,4 +532,21 @@ body {
 model-viewer#victory {
   --poster-color: transparent;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  animation: fade 4s cubic-bezier(0, 0.48, 0.19, 1.01) 3s both;
+  position: absolute;
+  top: 0; }
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .loader span {
+    font: 1.5rem/2.5rem "din-condensed-web", "DIN-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #171725;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+    text-align: center; }

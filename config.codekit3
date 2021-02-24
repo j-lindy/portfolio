@@ -233,17 +233,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/JL-magic.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/js/JL-magic-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/js/three.js": {
 		"bF": 0,
 		"ft": 64,
@@ -251,6 +240,28 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/three-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/victory-animation-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/victory-animation-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/victory-animation.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/victory-animation-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

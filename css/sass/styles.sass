@@ -330,6 +330,23 @@ model-viewer
 		--poster-color: transparent
 		width: 100vw
 		height: 100vh
+		animation: fade 4s $transition-cb 3s both
+		position: absolute
+		top: 0
+
+.loader
+	height: 100vh
+	width: 100vw
+	position: fixed
+	display: flex
+	justify-content: center
+	align-items: center
+	span
+		font: 1.5rem/2.5rem $font-condensed
+		color: $color-coal
+		letter-spacing: 30px
+		text-transform: uppercase
+		text-align: center
 
 
 
