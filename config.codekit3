@@ -101,6 +101,83 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/images/favicons/favicon120.png": {
+		"ft": 32768,
+		"iS": 791,
+		"oA": 0,
+		"oAP": "/images/favicons/favicon120.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/favicons/favicon152.png": {
+		"ft": 32768,
+		"iS": 1678227,
+		"oA": 0,
+		"oAP": "/images/favicons/favicon152.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/favicons/favicon16.png": {
+		"ft": 32768,
+		"iS": 205,
+		"oA": 0,
+		"oAP": "/images/favicons/favicon16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/favicons/favicon167.png": {
+		"ft": 32768,
+		"iS": 1245,
+		"oA": 0,
+		"oAP": "/images/favicons/favicon167.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/favicons/favicon180.png": {
+		"ft": 32768,
+		"iS": 1378,
+		"oA": 0,
+		"oAP": "/images/favicons/favicon180.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/favicons/favicon32.png": {
+		"ft": 32768,
+		"iS": 235,
+		"oA": 0,
+		"oAP": "/images/favicons/favicon32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/images/favicons/favicon96.png": {
+		"ft": 32768,
+		"iS": 670,
+		"oA": 0,
+		"oAP": "/images/favicons/favicon96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/images/JL-6079.jpg": {
 		"ft": 16384,
 		"iS": 559304,
