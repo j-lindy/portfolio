@@ -547,8 +547,8 @@ model-viewer#victory {
   align-items: center;
   pointer-events: none; }
   .loader span {
-    font: 1.5rem/2.5rem "din-condensed-web", "DIN-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font: 1.5rem/1.5rem "din-condensed-web", "DIN-Bold", Helvetica Neue, Helvetica, Arial, sans-serif;
     color: #171725;
-    letter-spacing: 30px;
+    letter-spacing: 1rem;
     text-transform: uppercase;
     text-align: center; }
