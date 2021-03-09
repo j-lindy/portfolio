@@ -1,1 +1,1 @@
-(()=>{const e=document.querySelector("#victory"),r=performance.now(),o=t=>{e.cameraOrbit=oscillate("0deg 45deg 180.7m","0deg -10deg 180.7m",4e3,t-r),requestAnimationFrame(o)};o()})();
+(()=>{const e=document.querySelector("#victory"),t=performance.now(),r=function(e,t,r,n){const o=t-e;return Math.cos(Math.PI+2*Math.PI*n/r)*(e+o/2)+o/2},n=o=>{e.cameraOrbit=r("0deg 45deg 180.7m","0deg -10deg 180.7m",40,o-t),requestAnimationFrame(n)};n()})();
